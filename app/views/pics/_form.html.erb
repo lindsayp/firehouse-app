@@ -1,0 +1,22 @@
+
+
+	<%= simple_form_for @pic do |f| %>
+		<%= f.input :lesson %>
+
+		<br/>
+		<%= f.input :image, label: "upload a photo" %>
+
+		<br/>
+
+		<%= f.input :emotion, label: 'how did you you feel about this lesson?', placeholder: 'Stoked, Jazzed, Super' %>
+
+		<br/>
+
+		<%= f.input :learned, label: "what did you learn?", placeholder: 'ruby, git, heroku, css'%>
+
+	<%= submit_tag 'save your submission', :class => 'btn btn-success btn-large' %>
+
+
+
+	<% end %>
+

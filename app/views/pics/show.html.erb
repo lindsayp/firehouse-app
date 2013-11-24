@@ -8,6 +8,10 @@
 	<h2 class="stolen-h2">
 		I felt: <%= @pic.emotion %> </h2>
 	<h2 class="stolen-h2"> I learned: <%= @pic.learned %> </h2>
+	<%= link_to 'delete', pic_path(@pic), :method => :delete, :class => 'btn btn-danger btn-large',  :confirm => "are you sure you want to delete this?" %>
+
+<%= link_to 'Edit', edit_pic_path(@pic), :class => 'btn btn-warning btn-large'  %>
+
 	<%= link_to 'Back', pics_path ,:class => 'btn btn-warning btn-large'  %>
 </div>
 
