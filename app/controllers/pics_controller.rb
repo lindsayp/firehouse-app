@@ -1,11 +1,19 @@
 class PicsController < ApplicationController
 
+	def show
+		@pic = Pic.find(params[:id])
+	end
+
+
 
 	def create
 #pic.create()
 		@pic = Pic.create( pic_params )
-
-		redirect_to pics_path 
+		if @pic.valid?
+			redirect_to pics_path 
+		else
+			render :new, status => :unprocessable_entity
+		end
 	end
 
 	def new

@@ -4,8 +4,10 @@
 			<h1 class="stolen-h1">
 				Lesson:  <%= pic.lesson %> </h1>
 <br/>
-<%= image_tag pic.image %>
 
+<%= link_to  pic_path(pic) do %>
+<%= image_tag pic.image %>
+<% end %>
 
 		<br />
 			<h2 class="stolen-h2">
